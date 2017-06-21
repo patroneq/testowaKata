@@ -12,7 +12,7 @@ public class Calculator {
 			return stringToInt(input);
 		}
 		else {
-			return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+			return stringToInt(numbers[0]) + stringToInt(numbers[1]);
 		}
 	}
 	
