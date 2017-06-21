@@ -48,6 +48,6 @@ public class TestCalculate {
 	
 	@Test
 	public void ignoresNumbersGreaterThan1000() throws Exception {
-		assertEquals(calculator.calculate("1,2, 1100"), 3);
+		assertEquals(calculator.calculate("1,2,1100"), 3);
 	}
 }
