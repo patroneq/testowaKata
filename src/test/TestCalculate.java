@@ -40,4 +40,9 @@ public class TestCalculate {
 	public void threeNumbersDelimitedBothWaysReturnSum() {
 		assertEquals(calculator.calculate("1,2,3"), 6);
 	}
+	
+	@Test(expected = Exception.class)
+	public void negativeInputReturnsException() {
+		calculator.calculate("-1");
+	}
 }
