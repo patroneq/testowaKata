@@ -25,6 +25,11 @@ public class Calculator {
 	}
 
 	private int add(String[] numbers) {
+		int sum = addWithIgnoringNumbersGreaterThan1000(numbers);
+		return sum;
+	}
+
+	private int addWithIgnoringNumbersGreaterThan1000(String[] numbers) {
 		int sum = 0;
 		for (String number : numbers) {
 			if (stringToInt(number) > 1000) {
