@@ -20,8 +20,8 @@ public class Calculator {
 
 	private int getSum(String[] numbers) {
 		int sum = 0;
-		for (int i = 0; i < numbers.length; i++) {
-			sum += stringToInt(numbers[i]);
+		for (String number : numbers) {
+			sum += stringToInt(number);
 		}
 		return sum;
 	}
