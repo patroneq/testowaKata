@@ -2,8 +2,10 @@ package main;
 
 public class Calculator {
 
+	private static final String DELIMITER = ",|\n";
+
 	public int calculate(String input) {
-		String[] numbers = input.split(",|\n");
+		String[] numbers = input.split(DELIMITER);
 		
 		if(isEmpty(input)) {
 			return 0;
