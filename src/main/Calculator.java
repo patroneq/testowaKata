@@ -12,8 +12,12 @@ public class Calculator {
 			return stringToInt(input);
 		}
 		else {
-			return stringToInt(numbers[0]) + stringToInt(numbers[1]);
+			return getSum(numbers);
 		}
+	}
+
+	private int getSum(String[] numbers) {
+		return stringToInt(numbers[0]) + stringToInt(numbers[1]);
 	}
 	
 	private boolean isEmpty(String input) {
