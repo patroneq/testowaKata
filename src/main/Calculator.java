@@ -18,18 +18,26 @@ public class Calculator {
 		}
 	}
 
-	private int getSum(String[] numbers) throws Exception {
-		
-		for (String number : numbers) {
-			if (stringToInt(number) < 0) {
-				throw new Exception("Negative input");
-			}
-		}
+	private int getSum(String[] numbers) throws Exception {		
+		findNegativeNumbers(numbers);		
+		int sum = add(numbers);
+		return sum;
+	}
+
+	private int add(String[] numbers) {
 		int sum = 0;
 		for (String number : numbers) {
 			sum += stringToInt(number);
 		}
 		return sum;
+	}
+
+	private void findNegativeNumbers(String[] numbers) throws Exception {
+		for (String number : numbers) {
+			if (stringToInt(number) < 0) {
+				throw new Exception("Negative input");
+			}
+		}
 	}
 	
 	private boolean isEmpty(String input) {
